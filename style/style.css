@@ -1,0 +1,32 @@
+body{ 
+	background-image: url(../img/board.jpg);
+    background-color: black;
+    background-size:cover;
+    background-repeat: no-repeat;
+    font-size: 20px;
+}
+#UI{
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    padding: 5px;
+    height: 40px;
+    width: 100%;
+    background-color: saddlebrown;
+}
+#quarterCollom{
+    width: 25%;
+    display: block;
+    float: left;
+    text-align: center;
+}
+h3{
+    margin: 0px;
+    color: aliceblue;
+    text-shadow: 1px 1px 5px black;
+}
+button{
+    height: 30px;
+    width: 100px;
+}
+

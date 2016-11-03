@@ -1,0 +1,106 @@
+/*Style for the 3D dices*/
+
+/*Element*/
+#wrapper {
+    width: 60px;
+    height: 60px;
+    margin: 100px;
+    position: absolute;
+}
+#dice, #dice2
+{ 
+    width:inherit;
+    height:inherit;
+    position:inherit;
+    transform-style: preserve-3d;  
+    transition: all 1s linear;
+}
+
+/*Face standard*/
+.face {
+    position: inherit;
+    width: inherit;
+    height: inherit;
+}
+
+/*Faces of each span of the dice.*/
+.face1{
+    transform: translateZ(0px);
+    background: url(../img/diceFaces/one.jpg);
+    background-size: cover;
+}
+.face2{
+    transform:rotateX(90deg) translateY(0px);
+    transform-origin: bottom center;
+    background: url(../img/diceFaces/two.jpg);
+    background-size: cover;
+}
+.face3{
+    transform:rotateY(-270deg) translateX(60px);
+    transform-origin: top right;
+    background: url(../img/diceFaces/three.jpg);
+    background-size: cover;
+}
+.face4{
+    transform:rotateY(270deg) translateX(-60px);
+    transform-origin: center left;
+    background: url(../img/diceFaces/four.jpg);
+    background-size: cover;
+}
+.face5{
+    transform:rotateX(-90deg) translateY(0px);
+    transform-origin: top center;
+    background: url(../img/diceFaces/five.jpg);
+    background-size: cover;
+}
+.face6{
+    transform: translateZ(-60px) rotateY(180deg);
+    background: url(../img/diceFaces/six.jpg);
+    background-size: cover;
+}
+
+/*Spin animation*/
+@keyframes spinTo1 {
+    0% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+  100% { transform: rotateX(0deg) rotateY(360deg) rotateZ(360deg); }
+}
+@keyframes spinTo2 {
+    0% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+  100% { transform: rotateX(90deg) rotateY(360deg) rotateZ(360deg); }
+}
+@keyframes spinTo3 {
+    0% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+  100% { transform: rotateX(0deg) rotateY(-450deg) rotateZ(360deg); }
+}
+@keyframes spinTo4 {
+    0% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+  100% { transform: rotateX(0deg) rotateY(450deg) rotateZ(360deg); }
+}
+@keyframes spinTo5 {
+    0% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+  100% { transform: rotateX(-90deg) rotateY(-360deg) rotateZ(360deg); }
+}
+@keyframes spinTo6 {
+    0% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+  100% { transform: rotateX(180deg) rotateY(360deg) rotateZ(360deg); }
+}
+
+/*Move animation*/
+@keyframes mymove { 
+  0% {left:0px;     top: 0px;}
+100% {left:500px;   top: -100px;}
+}
+@-webkit-keyframes mymove
+{
+  0% {left: -0px;}
+100% {left:2400px;}
+}
+@keyframes mymove2 { 
+  0% {left:0px;}
+100% {left:700px;}
+}
+@-webkit-keyframes mymove2
+{
+  0% {left: -400px;}
+100% {left:2200px;}
+}

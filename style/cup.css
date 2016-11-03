@@ -1,0 +1,17 @@
+/*Style for the cup*/
+
+/*Cup ellement*/
+#cup{
+    top: 250px;
+    width: 400px;
+    height: 300px;
+    left: -100px;
+    position: relative;
+    z-index: 1;
+    background-image: url(../img/cup.png);
+}
+/*Cup animation*/
+@keyframes cupShake{
+    0% {left: -100px;}
+  100% {left:-70px;}
+}
