@@ -9,6 +9,7 @@
 }
 #dice, #dice2
 { 
+    perspective: 1000px;
     width:inherit;
     height:inherit;
     position:inherit;
@@ -21,6 +22,7 @@
     position: inherit;
     width: inherit;
     height: inherit;
+    border-radius: 5px;
 }
 
 /*Faces of each span of the dice.*/
