@@ -73,7 +73,6 @@ window.addEventListener("load",function(){
             //After 1.5 seconds, the values will be checked.
             setTimeout(function () {CheckingTheDicesValue();},1500);
         }
-        
     }
     //The AnimationUpdate declares the animation of the cup and dices empty and declares it again making it reset.
     function AnimationUpdate()
@@ -82,12 +81,12 @@ window.addEventListener("load",function(){
         cup.style.animation=dice.style.animation =dice2.style.animation ='';
         
         //after 0.01 second the animation is declared with the dices animation declared to the appropiate spinning animation.
-            setTimeout(function () {
-                cup.style.animation='cupShake 0.1s forwards 4 alternate';
-                
-                dice.style.animation = 'spinTo'+diceA+' 2s forwards 1 0s normal, mymove 2s forwards 2 alternate';
-                dice2.style.animation =  'spinTo'+diceB+' 2s forwards 1 0s normal, mymove2 2s forwards 2 alternate';
-            },10);
+        setTimeout(function () {
+            cup.style.animation='cupShake 0.1s forwards 4 alternate';
+            
+             dice.style.animation = 'spinTo'+diceA+' 2s forwards 1 0s normal, diceMove 2s forwards 2 alternate';
+            dice2.style.animation =  'spinTo'+diceB+' 2s forwards 1 0s normal, diceMove2 2s forwards 2 alternate';
+        },10);
     }
     
     //This function checks the values of the dices.
@@ -132,5 +131,4 @@ window.addEventListener("load",function(){
         //statusText updates with the right variables.
         statusText.innerHTML = "Turns: "+turns+" | Lives: "+lives;
     }
-
 })

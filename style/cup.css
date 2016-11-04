@@ -15,3 +15,7 @@
     0% {left: -100px;}
   100% {left:-70px;}
 }
+@-webkit-keyframes cupShake{
+    0% {left: -100px;}
+  100% {left:-70px;}
+}

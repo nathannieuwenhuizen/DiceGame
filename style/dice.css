@@ -87,21 +87,47 @@
   100% { transform: rotateX(180deg) rotateY(360deg) rotateZ(360deg); }
 }
 
+@-webkit-keyframes spinTo1 {
+    0% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+  100% { transform: rotateX(0deg) rotateY(360deg) rotateZ(360deg); }
+}
+@-webkit-keyframes spinTo2 {
+    0% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+  100% { transform: rotateX(90deg) rotateY(360deg) rotateZ(360deg); }
+}
+@-webkit-keyframes spinTo3 {
+    0% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+  100% { transform: rotateX(0deg) rotateY(-450deg) rotateZ(360deg); }
+}
+@-webkit-keyframes spinTo4 {
+    0% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+  100% { transform: rotateX(0deg) rotateY(450deg) rotateZ(360deg); }
+}
+@-webkit-keyframes spinTo5 {
+    0% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+  100% { transform: rotateX(-90deg) rotateY(-360deg) rotateZ(360deg); }
+}
+@keyframes spinTo6 {
+    0% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+  100% { transform: rotateX(180deg) rotateY(360deg) rotateZ(360deg); }
+}
+
 /*Move animation*/
-@keyframes mymove { 
+@keyframes diceMove { 
   0% {left:0px;     top: 0px;}
 100% {left:500px;   top: -100px;}
 }
-@-webkit-keyframes mymove
+@-webkit-keyframes diceMove
 {
   0% {left: -0px;}
 100% {left:2400px;}
 }
-@keyframes mymove2 { 
+
+@keyframes diceMove2 { 
   0% {left:0px;}
 100% {left:700px;}
 }
-@-webkit-keyframes mymove2
+@-webkit-keyframes diceMove2
 {
   0% {left: -400px;}
 100% {left:2200px;}
