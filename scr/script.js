@@ -2,11 +2,11 @@
 window.addEventListener("load",function(){
     
     //Declares the variables needed for the game.
-    var diceA,diceB,turns,lives,canRoll;
+    var diceAValue,diceBValue,turns,lives,canRoll;
     
     //Declares the dices, cups, button and div ellements.
-    var dice = document.getElementById("dice");
-    var dice2 = document.getElementById("dice2");
+    var diceA = document.getElementById("dice");
+    var diceB = document.getElementById("dice2");
     var cup = document.getElementById("cup");
     
     var rollButton = document.getElementById("spawnButton");
@@ -64,28 +64,28 @@ window.addEventListener("load",function(){
             UpdateText(resultText.innerHTML);
             
             //DiceA and DiceB get random values between 1 and 6.
-            diceA = numberOperations.GetRandomNumberInRange(1,6);
-            diceB = numberOperations.GetRandomNumberInRange(1,6);
+            diceAValue = numberOperations.GetRandomNumberInRange(1,6);
+            diceBValue = numberOperations.GetRandomNumberInRange(1,6);
             
             //CSS animation updates.
             AnimationUpdate();
             
             //After 1.5 seconds, the values will be checked.
-            setTimeout(function () {CheckingTheDicesValue();},1500);
+            setTimeout(function () {    CheckingTheDicesValue();    },1500);
         }
     }
     //The AnimationUpdate declares the animation of the cup and dices empty and declares it again making it reset.
     function AnimationUpdate()
     {
         //The animation is declared empty
-        cup.style.animation=dice.style.animation =dice2.style.animation ='';
+        cup.style.animation=diceA.style.animation =diceB.style.animation ='';
         
         //after 0.01 second the animation is declared with the dices animation declared to the appropiate spinning animation.
         setTimeout(function () {
             cup.style.animation='cupShake 0.1s forwards 4 alternate';
             
-             dice.style.animation = 'spinTo'+diceA+' 2s forwards 1 0s normal, diceMove 2s forwards 2 alternate';
-            dice2.style.animation =  'spinTo'+diceB+' 2s forwards 1 0s normal, diceMove2 2s forwards 2 alternate';
+             diceA.style.animation = 'spinTo'+diceAValue+' 2s forwards 1 0s normal, diceMove 2s forwards 2 alternate';
+            diceB.style.animation =  'spinTo'+diceBValue+' 2s forwards 1 0s normal, diceMove2 2s forwards 2 alternate';
         },10);
     }
     
@@ -96,13 +96,13 @@ window.addEventListener("load",function(){
         canRoll = true;
         
         //if the dice values are the same.
-        if(diceA == diceB)
+        if(diceAValue == diceBValue)
         {
             //lives goes up.
             lives++;
             
             //Text gets updated.
-            UpdateText("You got "+diceA+" and "+diceB+"! Life up!");
+            UpdateText("You got "+diceAValue+" and "+diceBValue+"! Life up!");
         }
         
         //if the dices are different.
@@ -110,7 +110,7 @@ window.addEventListener("load",function(){
         {
             //lives goes down.
             lives--;
-            UpdateText("You rolled a "+diceA+" and "+diceB+" and are not the same...");
+            UpdateText("You rolled a "+diceAValue+" and "+diceBValue+" and are not the same...");
             
             //if there are no lives left.
             if(lives == 0)
