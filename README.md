@@ -11,4 +11,5 @@ If not, then you lose a life.
 Continue as long as possible until you don't have any lives left.
 Your score is the amount of turns you rolled.
 
-The dices and cub is animated with CSS.  
+The dices and cup are animated with CSS keyframes.
+Game programmed in Javascript.
