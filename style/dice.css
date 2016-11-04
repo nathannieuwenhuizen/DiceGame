@@ -107,6 +107,7 @@
     0% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
   100% { transform: rotateX(-90deg) rotateY(-360deg) rotateZ(360deg); }
 }
+@-webkit-keyframes spinTo6 {
     0% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
   100% { transform: rotateX(180deg) rotateY(360deg) rotateZ(360deg); }
 }
